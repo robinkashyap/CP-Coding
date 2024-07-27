@@ -5,3 +5,5 @@ Day 1 - Linear Search, Binary Search, Bubble Sort, Insertion Sort, Selection Sor
 Day 2 - Arrays - Two Pair Sum, Largest Element, Second Largest Element, Array is sorted or not, Remove Duplicates from sorted array
 
 Day 3 - Conformance Testing - I studied about protocol conformance testing as I have to give presentation
+
+Day 4 - Done questions on Array pushed the codes in Day 2 Folder
