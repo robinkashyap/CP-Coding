@@ -1,4 +1,7 @@
+# Time Complexity - O(max(m,n))
+# Space Complexity - O(max(m,n))
 
+# add the two array in third array 
 
 
 def sumArray(arr1, arr2):
