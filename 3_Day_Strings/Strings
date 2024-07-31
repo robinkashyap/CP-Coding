@@ -1,0 +1,8 @@
+Strings - Sequence of characters/unicodes
+Unicodes - how string stores the data internally (in the form of 0's and 1's)
+For multiline strings we will be using triple quotes.
+s = '''Hi my name is Robin
+             I am from Himachal'''
+    Hi my name is Robin\n I am from Himachal
+Strings are imutable
+we can not append string and integer
