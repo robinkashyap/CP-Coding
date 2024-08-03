@@ -11,7 +11,7 @@
 
 
 def bubbleSort(arr):
-    n = len(arr) - 1
+    n = len(arr)
     for i in range(n):
         swap = False
         for j in range(n-1):
@@ -21,7 +21,7 @@ def bubbleSort(arr):
         if swap == False:
             break
  
-arr = [64, 34, 25, 12, 22, 11, 90]
+arr = [64, 34, 25, 12, 100, 100, 90]
 bubbleSort(arr)
 print("Sorted array:")
 print("[",end="")
