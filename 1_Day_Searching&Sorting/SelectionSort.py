@@ -17,7 +17,7 @@ def selectionSort(arr):
                 min = j
         arr[i],arr[min] = arr[min], arr[i]
 
-arr = [64, 34, 25, 12, 22, 11, 90, 25, 64, 22, 22]
+arr = [64, 34, 25, 12, 22, 11, 90, 25, 64, 22, 9]
 selectionSort(arr)
 print("Sorted array:")
 print("[",end="")
