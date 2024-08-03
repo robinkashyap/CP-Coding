@@ -7,7 +7,7 @@ def counting1(arr):
     n = len(arr)
     max = 0
     count = 0
-    for i in range(1,n):
+    for i in range(n):
         if arr[i] == 1:
             count = count + 1
         else:
