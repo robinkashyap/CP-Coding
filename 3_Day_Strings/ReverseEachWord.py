@@ -3,6 +3,9 @@
 
 # Reverse each word present in the string
 
+# My Name is Robin  ------>   yM emaN si niboR
+
+
 def reverseEachWord(str):
     arr = list(str)
     n = len(arr)
