@@ -18,7 +18,7 @@
 #     return str_new
 
 
-# To reduce the time complexity we can change the string to list and after operations again changes to list
+# To reduce the time complexity we can change the string to list and after operations again changes to string
 
 # Time Complexity - O(n)
 # Sapce Complexity - O(n)
