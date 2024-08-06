@@ -1,3 +1,4 @@
+# How to take input of 2D list from user
 # i*col + j - formula two add elements at their position
 
 str = input().split()
