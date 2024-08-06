@@ -1,3 +1,9 @@
+# Time Complexity - O(rows*col)
+# Space Complexity - O(1)
+
+# For a given two-dimensional integer array/list of size (N x M), you need to find out which row or column\n
+# has the largest sum(sum of all the elements in a row or column) amongst all the rows/columns.
+
 
 def largeSumColumnRow(list, row, col):
     max_col_sum, max_row_sum = 0, 0
