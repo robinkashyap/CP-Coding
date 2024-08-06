@@ -20,9 +20,9 @@ def largeSumColumnRow(list, row, col):
             row_index = i
     
     if max_row_sum >= max_col_sum:
-        print(f'Row {row_index}th have the maximum sum of {max_row_sum}')
+        print(f'Row {row_index} have the maximum sum of {max_row_sum}')
     else:
-        print(f'Column {col_index}th have the maximum sum of {max_col_sum}')
+        print(f'Column {col_index} have the maximum sum of {max_col_sum}')
     
 list = [[6, 9, 8, 8],
         [9, 2, 4, 1],
