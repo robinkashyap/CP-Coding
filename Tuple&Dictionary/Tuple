@@ -1,0 +1,7 @@
+Tuple - if you assign two values for a single variable then by default it become tuple in python
+Tuples are immutable
+
+e = 1,2
+b = (4,5,6)
+c = a + b  -->  (1,2,4,5,6)
+d = (a,b)  -->  ((1,2), (4,5,6))
