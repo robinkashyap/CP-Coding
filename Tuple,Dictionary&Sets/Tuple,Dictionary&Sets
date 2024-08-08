@@ -5,3 +5,7 @@ e = 1,2
 b = (4,5,6)
 c = a + b  -->  (1,2,4,5,6)
 d = (a,b)  -->  ((1,2), (4,5,6))
+
+Dictionary - Stores data in the form of key value pair
+
+Sets - collection of data but data not in order, it stores unique data
