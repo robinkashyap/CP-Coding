@@ -1,0 +1,15 @@
+def binarySearch(ar,x, start, end):
+    if start > end:
+        return -1
+    mid = start + (end-start)//2
+    if ar[mid] == x:
+        return mid
+    elif ar[mid] > x:
+        return binarySearch(ar, x, start, mid-1)
+    else:
+        return binarySearch(ar, x, mid+1, end)
+    
+ar = [10,13,24,76,123,155,189]
+x = 189
+result = binarySearch(ar,x,0,len(ar)-1)
+print(result)
