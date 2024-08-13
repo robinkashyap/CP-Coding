@@ -11,9 +11,9 @@ def partition(ar, low, high):
     i = low
     j = high
     while(i<j):
-        while(ar[i] <= pivot and i <= high):
+        while(ar[i] <= pivot and i <= high - 1):
             i += 1
-        while(ar[j] > pivot and j >= low):
+        while(ar[j] > pivot and j >= low + 1):
             j -= 1 
         if i < j:
             ar[i], ar[j] = ar[j], ar[i]
@@ -28,6 +28,7 @@ def quickSort(ar, low, high):
         quickSort(ar,p+1,high)
 
 
-arr = [64, 34, 25, 12, 22, 11, 90, 25, 64, 22, 9]
-quickSort(arr, 0, len(arr)-1)
+# arr = [64, 34, 25, 12, 22, 11, 90, 25, 64, 22, 1, 9]
+arr = [3,3,3,3,3,3]
+quickSort(arr, 0, len(arr) - 1)
 print(arr)
