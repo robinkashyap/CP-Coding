@@ -15,7 +15,7 @@ def lenLL(head):
     return count
 
 def insertAtI(head,i,data):
-    if i < 0 and i > lenLL(head):
+    if i < 0 or i > lenLL(head):
         return head
     curr = head
     prev = None
