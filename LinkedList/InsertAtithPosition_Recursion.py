@@ -1,3 +1,6 @@
+# Time Complexity - O(min(pos,n))
+# Space Complexity - O(min(pos,n))
+
 class Node:
     def __init__(self,data):
         self.data = data
@@ -9,10 +12,14 @@ def lenLL(head):
     return lenLL(head.next) + 1
 
 def insert(head,pos,data):
+    if pos < 0:
+        return head
     if pos == 0:
         newNode = Node(data)
         newNode.next = head
         return newNode
+    if head is None:
+        return None
     smallHead = insert(head.next, pos-1, data)
     head.next = smallHead
     return head
