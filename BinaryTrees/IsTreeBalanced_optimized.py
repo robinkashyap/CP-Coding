@@ -1,4 +1,4 @@
-# Time Complexity - Best Case -> O(nlogn), Worst Case -> O(n^2)
+# Time Complexity - O(n)
 
 class BinaryTreeNode:
     def __init__(self,data):
@@ -29,24 +29,20 @@ def treeInput():
     root.right = rightTree
     return root
 
-def height(root):
-    if root is None:
-        return 0
-    return max(height(root.left),height(root.right)) + 1
 
-def isBalancedTree(root):
+def getHeightAndCheckBalanced(root):
     if root is None:
-        return True
-    lh = height(root.left)
-    rh = height(root.right)
+        return 0, True
+    lh, isLeftBalanced = getHeightAndCheckBalanced(root.left)
+    rh, isRightBalanced= getHeightAndCheckBalanced(root.right)
+    h = 1 + max(lh,rh)
     if lh - rh > 1 or rh - lh > 1:
-        return False
-    isLeftBalanced = isBalancedTree(root.left)
-    isRightBalanced = isBalancedTree(root.right)
+        return h, False
+    
     if isLeftBalanced and isRightBalanced:
-        return True
+        return h, True
     else:
-        return False
+        return h, False
 root = treeInput()
 # printTree(root)
-print(isBalancedTree(root))
+print(getHeightAndCheckBalanced(root))
