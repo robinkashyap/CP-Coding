@@ -10,10 +10,10 @@
 #             when either preorder or inorder arrays are empty, at which point the function returns None.
 
 class Node:
-    def __init__(self, data, left=None, right=None):
+    def __init__(self, data):
         self.data = data
-        self.left = left
-        self.right = right
+        self.left = None
+        self.right = None
 
 def buildTree(inorder, preorder):
     if not preorder or not inorder:
