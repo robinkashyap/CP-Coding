@@ -1,4 +1,10 @@
+from sys import stdin, setrecursionlimit
 import queue
+
+setrecursionlimit(10 ** 6)
+
+
+#Following is the structure used to represent the Binary Tree Node
 class BinaryTreeNode:
     def __init__(self, data):
         self.data = data
@@ -18,32 +24,49 @@ def insertDuplicateNode(root):
     newNode.left = temp
     return root
 
-
-def treeInput():
-    rootData = int(input())
-    if rootData == -1:
-        return None
-    root = BinaryTreeNode(rootData)
-    leftTree = treeInput()
-    rightTree = treeInput()
-    root.left = leftTree
-    root.right = rightTree
+def takeinput():
+    q = queue.Queue()
+    rootdata = int(input())
+    if rootdata == -1:
+        return
+    root = BinaryTreeNode(rootdata)
+    q.put(root)
+    while(not(q.empty())):
+        curr_node = q.get()
+        leftChilddata = int(input())
+        if leftChilddata != -1:
+            leftChild = BinaryTreeNode(leftChilddata)
+            curr_node.left = leftChild
+            q.put(leftChild)
+        rightChilddata = int(input())
+        if rightChilddata != -1:
+            rightChild = BinaryTreeNode(rightChilddata)
+            curr_node.right = rightChild
+            q.put(rightChild)
     return root
 
-def levelWisePrint(root):
-    qp = queue.Queue()
-    qp.put(root)
-    while(not(qp.empty())):
-        curr_node = qp.get()
-        if curr_node is not None:
-            print(curr_node.data,end=':')
-        if curr_node.left:
-            print(f'L:{curr_node.left.data}',end=',')
-            qp.put(curr_node.left)
-        if curr_node.right:
-            print(f"R:{curr_node.right.data}")
-            qp.put(curr_node.right)
+def printLevel(root):
+    q=queue.Queue()
+    if root is None:
+        return
+    q.put(root)
+    q.put(None)
+    while(not(q.empty())):
+        curr_node = q.get()
+        if curr_node is None:
+            print()
+            if not(q.empty()):
+                q.put(None)
+        else:
+            print(curr_node.data, end=' ')
+        
+            if curr_node.left:
+                q.put(curr_node.left)
+            if curr_node.right:
+                q.put(curr_node.right)
 
-root = treeInput()
-nroot = insertDuplicateNode(root)
-levelWisePrint(nroot)
+root = takeinput()
+root = insertDuplicateNode(root)
+printLevel(root)
+
+    
