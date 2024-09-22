@@ -1,4 +1,4 @@
-# Time Complexiy = O(h) - height of the tree
+# Time Complexity - O(n) - if range covers all nodes
 import queue
 class BinaryTreeNode:
     def __init__(self, data):
@@ -6,19 +6,15 @@ class BinaryTreeNode:
         self.left = None
         self.right = None
 
-    #Solution
-def searchInBST(root, x):
-    #############################
-    # PLEASE ADD YOUR CODE HERE #
-    #############################
+def elementsInRangeK1K2(root, k1, k2):
     if root is None:
-        return False
-    if root.data == x:
-        return True
-    elif root.data>x:
-        return searchInBST(root.left,x)
-    else:
-        return searchInBST(root.right,x)
+        return
+    if root.data > k1:
+        elementsInRangeK1K2(root.left,k1,k2)
+    if k1 <= root.data <= k2:
+        print(root.data, end = " ")
+    if root.data < k2:
+        elementsInRangeK1K2(root.right, k1,k2)
 
 def buildLevelTree(levelorder):
     index = 0
@@ -48,9 +44,5 @@ def buildLevelTree(levelorder):
 # Main
 levelOrder = [int(i) for i in input().strip().split()]
 root = buildLevelTree(levelOrder)
-k=6
-ans = searchInBST(root, k)
-if ans:
-    print("true")
-else:
-    print("false")
+k1, k2 = (int(i) for i in input().strip().split())
+elementsInRangeK1K2(root, k1, k2)
