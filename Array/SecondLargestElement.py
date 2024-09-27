@@ -11,15 +11,17 @@ def largestElement(arr):
     elif n == 1:
         return -1
     else:
-        max_1 = arr[0]
-        max_2 = arr[0]
+        max_1 = float('-inf')
+        max_2 = float('-inf')
         for i in range(n):
             if max_1 < arr[i]:
                 max_2 = max_1
                 max_1 = arr[i]
+            elif arr[i] > max_2 and arr[i] != max_1:
+                max_2 = arr[i]
         return max_2
 
-arr = [0, -1, 2, -3, 1, 50, 100, 100]
+arr = [500, -1, 2, -3, 1, 50, 100, 100]
 result = largestElement(arr)
 if result == 0:
     print("No element is present in the array")
