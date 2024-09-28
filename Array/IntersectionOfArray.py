@@ -1,14 +1,14 @@
+# Intersection of two arrays
+
 def merging(arr1,arr2,m,n):
     arr = []
     i = 0
     j = 0
-    idx = 0
     while(i<m and j<n):
         if arr1[i]<arr2[j]:
             i = i + 1
         elif arr1[i] == arr2[j]:
             arr.append(arr1[i])
-            idx = idx + 1
             i = i + 1
             j = j + 1
         else:
