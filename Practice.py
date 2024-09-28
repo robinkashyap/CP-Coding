@@ -1,23 +1,17 @@
-def merging(arr1,arr2,m,n):
-    arr = []
-    i = 0
-    j = 0
-    idx = 0
-    while(i<m and j<n):
-        if arr1[i]<arr2[j]:
-            i = i + 1
-        elif arr1[i] == arr2[j]:
-            arr.append(arr1[i])
-            idx = idx + 1
-            i = i + 1
-            j = j + 1
-        else:
-            j = j + 1
+def pushingZero(arr):
+    n = len(arr)
+    count = 0
+    for i in range(n):
+        if arr[i] != 0:
+            arr[count] = arr[i]
+            count += 1
+    while(count<n):
+        arr[count] = 0
+        count += 1
     return arr
 
-arr1 = [3, 4, 10, 12, 17]
-arr2 = [8, 10, 12, 13]
-
-result = merging(arr1, arr2,5,4)
+arr = [3, 4, 0, 16, 0, 0, 17]
+arr1 = [0,0,0,0,0,0,0]
+arr2 = [1,2,3,4,5,6]
+result = pushingZero(arr2)     
 print(result)
-
