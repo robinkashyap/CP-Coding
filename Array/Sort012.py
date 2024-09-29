@@ -20,5 +20,6 @@ def sort012(arr):
     return arr
 
 arr = [1, 0, 2, 2, 1, 0, 1, 2, 1, 0]
+arr = [1, 0, 2, 2, 1, 0, 1, 2, 1, 0,0,1]
 result = sort012(arr)
 print(result)
