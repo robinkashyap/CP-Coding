@@ -22,4 +22,4 @@ def permutation(str1, str2):
                return False
        return True
 
-print(permutation('string', 'srtgnh'))
+print(permutation('string', 'srting'))

@@ -19,6 +19,6 @@ def highestOccuringChar(str):
             k = j
     return k, max
 
-str = 'xabbaa'
+str = 'xabbaab'
 char,occurance = highestOccuringChar(str)
 print(f"'{char}' occured {occurance} times in the string")

@@ -1,17 +1,19 @@
-def pushingZero(arr):
-    n = len(arr)
-    count = 0
-    for i in range(n):
-        if arr[i] != 0:
-            arr[count] = arr[i]
-            count += 1
-    while(count<n):
-        arr[count] = 0
-        count += 1
-    return arr
+def compressStr(str):
+    n = len(str)
+    start = 0
+    end = 0
+    str1 = ''
+    while(start<n):
+        while(end<n and str[start]==str[end]):
+            end += 1
+        count = end - start
+        str1 = str1 + str[start]
+        if count>1:
+            str1 = str1 + f'{count}'
+        start = end
+    return str1
 
-arr = [3, 4, 0, 16, 0, 0, 17]
-arr1 = [0,0,0,0,0,0,0]
-arr2 = [1,2,3,4,5,6]
-result = pushingZero(arr2)     
+
+str = 'aasadfssxxxx'
+result = compressStr(str)
 print(result)
