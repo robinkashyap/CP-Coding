@@ -1,19 +1,14 @@
-def compressStr(str):
-    n = len(str)
-    start = 0
-    end = 0
-    str1 = ''
-    while(start<n):
-        while(end<n and str[start]==str[end]):
-            end += 1
-        count = end - start
-        str1 = str1 + str[start]
-        if count>1:
-            str1 = str1 + f'{count}'
-        start = end
-    return str1
+def bubbleSort(arr):
+    n = len(arr)
+    for i in range(n):
+        swap = False
+        for j in range(n-1):
+            if arr[j]>arr[j+1]:
+                swap = True
+                arr[j],arr[j+1] = arr[j+1], arr[j]
+        if swap == False:
+            break
+    return arr
 
-
-str = 'aasadfssxxxx'
-result = compressStr(str)
-print(result)
+arr = [64, 34, 25, 12, 100, 100, 90]
+print(bubbleSort(arr))
