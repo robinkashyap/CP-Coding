@@ -1,14 +1,13 @@
-def bubbleSort(arr):
-    n = len(arr)
-    for i in range(n):
-        swap = False
-        for j in range(n-1):
-            if arr[j]>arr[j+1]:
-                swap = True
-                arr[j],arr[j+1] = arr[j+1], arr[j]
-        if swap == False:
-            break
-    return arr
+def binarySearch(arr,low,high,k):
+    while low<=high:
+        mid = low + (high-low)//2
+        if arr[mid] == k:
+            return mid
+        elif arr[mid]>=k:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return -1
 
-arr = [64, 34, 25, 12, 100, 100, 90]
-print(bubbleSort(arr))
+arr = [1,3,4,6,10,12,23,45,67,90,100,101]
+print(binarySearch(arr,0,len(arr)-1,12))
