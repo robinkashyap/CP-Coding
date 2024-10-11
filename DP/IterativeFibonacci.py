@@ -1,3 +1,6 @@
+# Time Complexity - O(n)
+# Space Complexity - O(n)
+
 def fib(n):
     dp = [0 for i in range(n+1)]
     dp[1] = 1
