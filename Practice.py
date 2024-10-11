@@ -1,13 +1,11 @@
-def binarySearch(arr,low,high,k):
-    while low<=high:
-        mid = low + (high-low)//2
-        if arr[mid] == k:
-            return mid
-        elif arr[mid]>=k:
-            high = mid - 1
-        else:
-            low = mid + 1
-    return -1
+def printKFreqWord(s, k):
+    words = s.split()
+    d = {}
+    for i in words:
+        d[i] = d.get(i,0) + 1
+    for j in d:
+        if d[j] == 2:
+            print(j) 
 
-arr = [1,3,4,6,10,12,23,45,67,90,100,101]
-print(binarySearch(arr,0,len(arr)-1,12))
+s = 'This is a word string having many many word'
+result = printKFreqWord(s,2)
