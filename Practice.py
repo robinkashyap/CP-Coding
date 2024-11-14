@@ -1,11 +1,15 @@
-def printKFreqWord(s, k):
-    words = s.split()
-    d = {}
-    for i in words:
-        d[i] = d.get(i,0) + 1
-    for j in d:
-        if d[j] == 2:
-            print(j) 
+def insertionSort(arr):
+    n = len(arr)
+    for i in range(1,n):
+        temp = arr[i]
+        j = i-1
+        while(j>=0 and arr[j]>temp):
+            arr[j+1] = arr[j]
+            j = j - 1
+        arr[j+1] = temp
+            
+    return arr
 
-s = 'This is a word string having many many word'
-result = printKFreqWord(s,2)
+arr = [64, 34, 25, 12, 22, 11, 90, 25, 64, 22, 9] # 64,64
+print(insertionSort(arr))
+            
