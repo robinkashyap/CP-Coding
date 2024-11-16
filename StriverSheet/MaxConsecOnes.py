@@ -12,5 +12,5 @@ def maxConsecOnes(arr):
         max = count
     return max
 
-arr = [1,1,1,1,1,1,1,1]
+arr = [1,1,1,1,1,1,1,1]                                                                   
 print(maxConsecOnes(arr))
