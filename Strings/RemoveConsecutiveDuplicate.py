@@ -24,11 +24,11 @@
 
 
 def removeConsDup(str):
-    arr=[]
-    for i in range(0, len(str)-1):
-        if str[i] != str[i+1]:
-            arr.append(str[i+1])
-    return ''.join(arr)
+    arr=''
+    for char in str:
+        if len(arr) == 0 or arr[-1] != char:
+            arr = arr + char
+    return arr 
 
 
 
