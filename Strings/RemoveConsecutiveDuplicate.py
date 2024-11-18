@@ -30,8 +30,6 @@ def removeConsDup(str):
             arr = arr + char
     return arr 
 
-
-
 str = 'aaabccbcdbdd'
 result = removeConsDup(str)
 print(result)
