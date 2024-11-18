@@ -21,5 +21,7 @@ def countVCDS(str):
     return v, c, d, s
 
 str = 'afIGu0&^%09'
-v, c, d, s = countVCDS(str)
-print(v, c, d, s)
+# v, c, d, s = countVCDS(str)
+print(countVCDS(str))
+
+# print(v, c, d, s)
