@@ -12,7 +12,6 @@ def highestOccuringChar(str):
         i = i.lower()
         arr[ord(i)-97] += 1
     max = 0
-    # k = ''
     for j in str:
         if arr[ord(j)-97]>max:
             max = arr[ord(j)-97]
