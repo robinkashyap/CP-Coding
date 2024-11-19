@@ -5,16 +5,16 @@
 
 # My Name is Robin  ------>   yM emaN si niboR
 
+def reverseWord(arr,start,end):
+        while(start<=end):
+            arr[start], arr[end] = arr[end], arr[start]
+            start = start + 1
+            end = end - 1
 
 def reverseEachWord(str):
     arr = list(str)
     n = len(arr)
     j = 0
-    def reverseWord(arr,start,end):
-        while(start<=end):
-            arr[start], arr[end] = arr[end], arr[start]
-            start = start + 1
-            end = end - 1
     for i in range(n):
         if arr[i] == ' ':
             reverseWord(arr,j,i-1)
