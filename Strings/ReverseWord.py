@@ -17,13 +17,17 @@ def reverseString(str):
     j = n-1
     i = 0
     l = 0
+    while(i<j):
+        arr[i], arr[j] = arr[j], arr[i]
+        i = i + 1
+        j = j-1
 
-    for i in range(n):
-        if arr[i] == ' ':
-            reverseWord(arr,l,i-1)
-            l = i + 1
+    # for i in range(n):
+    #     if arr[i] == ' ':
+    #         reverseWord(arr,l,i-1)
+    #         l = i + 1
             
-    reverseWord(arr,l,n-1)
+    # reverseWord(arr,l,n-1)
 
     return ''.join(arr)
 
