@@ -7,9 +7,10 @@
 def swapAlternate(arr):
     n = len(arr)
     for i in range(1,n,2):
-        temp = arr[i]
-        arr[i] = arr[i-1]
-        arr[i-1] = temp
+        # temp = arr[i]
+        # arr[i] = arr[i-1]
+        # arr[i-1] = temp
+        arr[i-1],arr[i] = arr[i],arr[i-1]
     return arr
 
 

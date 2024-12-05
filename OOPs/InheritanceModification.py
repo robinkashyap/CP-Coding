@@ -16,11 +16,13 @@ class Vehicle:
 
 class Car(Vehicle):
     def __init__(self,color,maxSpeed,numGear, isConvertible):
-        super().__init__(color,maxSpeed)
+        #super().__init__(color,maxSpeed)
+        Vehicle.__init__(self,color,maxSpeed)
         self.numGear = numGear
         self.isConvertible = isConvertible
     def printCar(self):
-        super().printVeh()
+        #super().printVeh()
+        Vehicle.printVeh(self)
         # self.printVeh()       
         print("numGear: ", self.numGear)
         print("isconvertible: ", self.isConvertible)

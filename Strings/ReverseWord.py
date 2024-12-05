@@ -22,12 +22,12 @@ def reverseString(str):
         i = i + 1
         j = j-1
 
-    # for i in range(n):
-    #     if arr[i] == ' ':
-    #         reverseWord(arr,l,i-1)
-    #         l = i + 1
+    for i in range(n):
+        if arr[i] == ' ':
+            reverseWord(arr,l,i-1)
+            l = i + 1
             
-    # reverseWord(arr,l,n-1)
+    reverseWord(arr,l,n-1)
 
     return ''.join(arr)
 
