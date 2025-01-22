@@ -5,9 +5,9 @@
 
 
 def sumArray(arr1, arr2):
-    n = len(arr1)
-    m = len(arr2)
-    k = max(n,m)
+    n = len(arr1) - 1
+    m = len(arr2) - 1
+    k = max(n,m) + 1
     arr = [0]*(k + 1)
     carry = 0
     while (n>=0 and m>=0):
