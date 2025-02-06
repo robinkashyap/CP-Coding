@@ -18,5 +18,5 @@ class Student:
 
 s1 = Student(90,80,85)
 print(s1.avg())
-s1.getSchool()
-s1.info()
+Student.getSchool() # s1.getSchool() it will also work but not recommended
+Student.info() # s1.info()
