@@ -6,6 +6,8 @@ def inter(arr1,arr2):
     while(i<m and j<n):
         if arr1[i] == arr2[j]:
             arr.append(arr1[i])
+            i+=1
+            j+=1
         elif arr1[i]<arr2[j]:
             i+=1
         else:
