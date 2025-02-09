@@ -9,4 +9,5 @@ def removeDup(arr):
 
 arr = [1, 1, 1, 2, 5, 5, 6, 10, 30]
 res = removeDup(arr)
-print(res)
+for i in range(res+1):
+    print(arr[i],end=" ")
