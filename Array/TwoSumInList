@@ -1,0 +1,13 @@
+# in list we add two numbers if the sum is present in the list then print the those two number
+def find_pairs_optimized(nums):
+    num_set = set()  # Store seen numbers
+
+    for num in nums:
+        for seen_num in num_set:  # Check for complement pairs
+            if num + seen_num in nums:
+                print(seen_num, num)
+        
+        num_set.add(num)  # Store number for future lookups
+
+nums = [1, 2, 3, 4, 5, 8]
+find_pairs_optimized(nums)
