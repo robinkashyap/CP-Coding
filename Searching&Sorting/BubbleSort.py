@@ -12,16 +12,16 @@
 
 def bubbleSort(arr):
     n = len(arr)
-    for i in range(n):
+    for i in range(1,n):
         swap = False
-        for j in range(n-1):
+        for j in range(n-i):
             if arr[j] > arr[j+1]:
                 swap = True
                 arr[j],arr[j+1] = arr[j+1],arr[j]
         if swap == False:
             break
  
-arr = [64, 34, 25, 12, 100, 100, 90]
+arr = [158, 34, 25, 12, 100, 100, 90]
 bubbleSort(arr)
 print("Sorted array:")
 print("[",end="")
